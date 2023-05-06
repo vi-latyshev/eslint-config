@@ -1,0 +1,43 @@
+{
+  "name": "@v.latyshev/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint configuration by VI",
+  "main": "index.js",
+  "author": "vi-latyshev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vi-latyshev/eslint-config.git"
+  },
+  "files": [
+    "index.js",
+    "react.js"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "yarn lint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "^13.4.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3"
+  }
+}
