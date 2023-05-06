@@ -1,3 +1,10 @@
+# [1.2.0-next.1](https://github.com/vi-latyshev/eslint-config/compare/v1.1.1-next.1...v1.2.0-next.1) (2023-05-06)
+
+
+### Features
+
+* prefer default import for next.js app router ([220cc08](https://github.com/vi-latyshev/eslint-config/commit/220cc08001322f152a7f180ebf7eec4eecf19164))
+
 ## [1.1.1-next.1](https://github.com/vi-latyshev/eslint-config/compare/v1.1.0...v1.1.1-next.1) (2023-05-06)
 
 
