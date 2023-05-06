@@ -8,6 +8,9 @@ module.exports = {
     overrides: [
         {
             files: ['**/*.ts?(x)'],
+            extends: [
+                'plugin:@next/next/recommended',
+            ],
             // If adding a typescript-eslint version of
             // an existing ESLint (equivalents) rule,
             // make sure to disable the ESLint rule here.

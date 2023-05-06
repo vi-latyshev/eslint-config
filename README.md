@@ -13,7 +13,7 @@ Then create a file named `.eslintrc.js` with following contents in the root fold
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: '@v.latyshev'
+  extends: '@v.latyshev',
   parserOptions: {
     tsconfigRootDir: __dirname,
   },
@@ -25,7 +25,7 @@ module.exports = {
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: '@v.latyshev/eslint-config/react'
+  extends: '@v.latyshev/eslint-config/react',
   parserOptions: {
     tsconfigRootDir: __dirname,
   },
