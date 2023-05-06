@@ -1,6 +1,6 @@
 {
   "name": "@v.latyshev/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint configuration by VI",
   "main": "index.js",
   "author": "vi-latyshev",
