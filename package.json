@@ -13,6 +13,10 @@
     "index.js",
     "react.js"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.yarnpkg.com/"
+  },
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint .",
@@ -39,5 +43,9 @@
     "eslint": "^8.40.0",
     "eslint-plugin-import": "^2.27.5",
     "husky": "^8.0.3"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": "^1.22.0"
   }
 }
