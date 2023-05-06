@@ -28,7 +28,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
           scope: '@v.latyshev'
-      - run: npm ci
-      - run: npm publish
+      - run: yarn
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -1,4 +1,5 @@
 # eslint-config
+[![Node.js Package](https://github.com/vi-latyshev/eslint-config/actions/workflows/yarn-publish.yml/badge.svg)](https://github.com/vi-latyshev/eslint-config/actions/workflows/yarn-publish.yml)
 
 ## Installing
 
