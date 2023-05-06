@@ -1,5 +1,7 @@
 # eslint-config
-[![Node.js Package](https://github.com/vi-latyshev/eslint-config/actions/workflows/yarn-publish.yml/badge.svg)](https://github.com/vi-latyshev/eslint-config/actions/workflows/yarn-publish.yml)
+
+[![Release](https://github.com/vi-latyshev/eslint-config/actions/workflows/release.yml/badge.svg)][gh-actions]
+[![Version][badge-vers]][npm]
 
 ## Installing
 
@@ -33,3 +35,7 @@ module.exports = {
 ```
 
 That's it! You can override the settings from `eslint-config` by editing the `.eslintrc.js` file.
+
+[gh-actions]: https://github.com/vi-latyshev/eslint-config/actions/workflows/release.yml
+[npm]: https://www.npmjs.com/package/@v.latyshev/eslint-config
+[badge-vers]: https://img.shields.io/npm/v/@v.latyshev/eslint-config
