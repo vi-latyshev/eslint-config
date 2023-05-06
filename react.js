@@ -4,12 +4,17 @@
 module.exports = {
     extends: [
         require.resolve('.'),
+        'airbnb/hooks',
     ],
+    env: {
+        browser: true,
+    },
     overrides: [
         {
             files: ['**/*.ts?(x)'],
             extends: [
-                'plugin:@next/next/recommended',
+                'airbnb-base',
+                'next/core-web-vitals',
             ],
             // If adding a typescript-eslint version of
             // an existing ESLint (equivalents) rule,

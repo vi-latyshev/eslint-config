@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
 
 /**
@@ -12,7 +11,6 @@ module.exports = {
     env: {
         es6: true,
         node: true,
-        browser: true,
     },
     parserOptions: {
         sourceType: 'module',
