@@ -46,6 +46,12 @@ module.exports = {
                 'react/function-component-definition': ['error', {
                     namedComponents: 'arrow-function',
                 }],
+                'react/jsx-filename-extension': [
+                    'error',
+                    {
+                        extensions: ['.jsx', '.tsx'],
+                    },
+                ],
                 // 'react-hooks/exhaustive-deps': 'off',
 
                 // jsx-a11y
