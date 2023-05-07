@@ -53,8 +53,8 @@ module.exports = {
             },
         },
         {
-            // Next.js 13+ App Router
-            files: ['**/(app|pages)/**'],
+            // Next.js App Router | Pages Routes
+            files: ['**/app/**', '**/pages/**'],
             rules: {
                 'import/no-default-export': 'off',
                 'import/prefer-default-export': 'error',
