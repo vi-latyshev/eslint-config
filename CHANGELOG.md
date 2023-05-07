@@ -1,3 +1,10 @@
+# [1.2.0-next.2](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.1...v1.2.0-next.2) (2023-05-07)
+
+
+### Features
+
+* **react:** add pages for prefer default for next.js ([9fac948](https://github.com/vi-latyshev/eslint-config/commit/9fac948a089efe7417e8c5cfe7718c746a66ae43))
+
 # [1.2.0-next.1](https://github.com/vi-latyshev/eslint-config/compare/v1.1.1-next.1...v1.2.0-next.1) (2023-05-06)
 
 
