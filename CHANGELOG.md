@@ -1,3 +1,10 @@
+# [1.2.0-next.5](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.4...v1.2.0-next.5) (2023-05-07)
+
+
+### Bug Fixes
+
+* next config & react in jsx scope & pathGroup in import/orde ([e95d036](https://github.com/vi-latyshev/eslint-config/commit/e95d036f25208fa081706d6bc97cb992cbece724))
+
 # [1.2.0-next.4](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.3...v1.2.0-next.4) (2023-05-07)
 
 
