@@ -74,6 +74,10 @@ module.exports = {
                 ],
                 pathGroups: [
                     {
+                        pattern: '*@*/**',
+                        group: 'internal',
+                    },
+                    {
                         pattern: '*(types)/**',
                         group: 'internal',
                         position: 'after',
@@ -83,7 +87,7 @@ module.exports = {
                 'newlines-between': 'always-and-inside-groups',
             },
         ],
-
+        'import/extensions': 'off',
     },
     overrides: [
         {
@@ -105,10 +109,12 @@ module.exports = {
             // an existing ESLint (equivalents) rule,
             // make sure to disable the ESLint rule here.
             rules: {
-                'no-shadow': 'off',
+                'import/extensions': 'off',
 
+                'no-shadow': 'off',
                 // https://typescript-eslint.io/rules/
                 '@typescript-eslint/no-shadow': 'error',
+
                 '@typescript-eslint/no-explicit-any': 'error',
 
                 semi: 'off',

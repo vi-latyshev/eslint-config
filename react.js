@@ -14,7 +14,6 @@ module.exports = {
             files: ['**/*.ts?(x)'],
             extends: [
                 'airbnb',
-                'next/core-web-vitals',
                 require.resolve('.'),
             ],
             // If adding a typescript-eslint version of
@@ -40,7 +39,7 @@ module.exports = {
                 // 'react/prop-types': 'off',
                 // 'react/jsx-one-expression-per-line': 'off',
                 'react/no-unescaped-entities': 'warn',
-                // 'react/react-in-jsx-scope': 'off',
+                'react/react-in-jsx-scope': 'off',
                 // 'react/require-default-props': 'off',
                 // 'react/display-name': 'off',
                 'react/function-component-definition': ['error', {
