@@ -1,3 +1,10 @@
+# [1.2.0-next.4](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.3...v1.2.0-next.4) (2023-05-07)
+
+
+### Bug Fixes
+
+* **react:** jsx-filename-extension for tsx ([b82f369](https://github.com/vi-latyshev/eslint-config/commit/b82f36913a5f157e2ca1f1a9e51dacff6adbd1cc))
+
 # [1.2.0-next.3](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.2...v1.2.0-next.3) (2023-05-07)
 
 
