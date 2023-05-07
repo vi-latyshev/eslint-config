@@ -1,3 +1,10 @@
+# [1.2.0-next.3](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.2...v1.2.0-next.3) (2023-05-07)
+
+
+### Bug Fixes
+
+* **react:** fix pages for prefer default for next.js ([116f824](https://github.com/vi-latyshev/eslint-config/commit/116f824bf97f3621e98d39befed4518689b55689))
+
 # [1.2.0-next.2](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.1...v1.2.0-next.2) (2023-05-07)
 
 
