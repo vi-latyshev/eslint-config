@@ -14,6 +14,7 @@ module.exports = {
     },
     parserOptions: {
         sourceType: 'module',
+        ecmaVersion: 2020,
     },
     rules: {
         // http://eslint.org/docs/rules/
@@ -55,6 +56,12 @@ module.exports = {
             'as-needed',
         ],
         'newline-before-return': 'error',
+        'no-unused-vars': [
+            'warn',
+            {
+                argsIgnorePattern: '^_',
+            },
+        ],
 
         // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
         'import/no-default-export': 'error',
