@@ -1,3 +1,10 @@
+# [1.2.0-next.6](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.5...v1.2.0-next.6) (2023-05-08)
+
+
+### Bug Fixes
+
+* always lines between class ([92fe944](https://github.com/vi-latyshev/eslint-config/commit/92fe944b150651875267fd80a449de919d55cdfc))
+
 # [1.2.0-next.5](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.4...v1.2.0-next.5) (2023-05-07)
 
 
