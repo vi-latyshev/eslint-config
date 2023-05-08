@@ -36,7 +36,7 @@ module.exports = {
                         multi: 1,
                     },
                 }],
-                // 'react/prop-types': 'off',
+                'react/prop-types': 'off',
                 // 'react/jsx-one-expression-per-line': 'off',
                 'react/no-unescaped-entities': 'warn',
                 'react/react-in-jsx-scope': 'off',

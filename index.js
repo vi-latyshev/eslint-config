@@ -160,7 +160,7 @@ module.exports = {
                 ],
                 '@typescript-eslint/type-annotation-spacing': 'error',
                 '@typescript-eslint/explicit-module-boundary-types': 'error',
-                '@typescript-eslint/lines-between-class-members': ['error', 'never'],
+                '@typescript-eslint/lines-between-class-members': ['error', 'always'],
                 '@typescript-eslint/member-ordering': [
                     'error',
                     {
