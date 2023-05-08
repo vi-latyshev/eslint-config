@@ -1,3 +1,10 @@
+# [1.2.0-next.7](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.6...v1.2.0-next.7) (2023-05-08)
+
+
+### Bug Fixes
+
+* no-unused-vars for js files ([56a236e](https://github.com/vi-latyshev/eslint-config/commit/56a236e6b364dc4e6743001c4d4fed1cbdd776e4))
+
 # [1.2.0-next.6](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.5...v1.2.0-next.6) (2023-05-08)
 
 
