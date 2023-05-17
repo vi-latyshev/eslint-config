@@ -81,7 +81,7 @@ module.exports = {
                 ],
                 pathGroups: [
                     {
-                        pattern: '*@*/**',
+                        pattern: '*@/**',
                         group: 'internal',
                     },
                     {
@@ -188,6 +188,12 @@ module.exports = {
                             'protected-method',
                             'private-method',
                         ],
+                    },
+                ],
+                '@typescript-eslint/explicit-member-accessibility': [
+                    'error',
+                    {
+                        accessibility: 'no-public',
                     },
                 ],
             },
