@@ -1,3 +1,10 @@
+# [1.2.0-next.8](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.7...v1.2.0-next.8) (2023-05-17)
+
+
+### Bug Fixes
+
+* import order for alias ([215af34](https://github.com/vi-latyshev/eslint-config/commit/215af344c3231c79f83ba225742a71ea4c283377))
+
 # [1.2.0-next.7](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.6...v1.2.0-next.7) (2023-05-08)
 
 
