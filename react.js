@@ -40,7 +40,7 @@ module.exports = {
                 // 'react/jsx-one-expression-per-line': 'off',
                 'react/no-unescaped-entities': 'warn',
                 'react/react-in-jsx-scope': 'off',
-                // 'react/require-default-props': 'off',
+                'react/require-default-props': 'off',
                 // 'react/display-name': 'off',
                 'react/function-component-definition': ['error', {
                     namedComponents: 'arrow-function',

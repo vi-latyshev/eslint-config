@@ -91,10 +91,12 @@ module.exports = {
                     },
                 ],
                 pathGroupsExcludedImportTypes: ['builtin', 'type'],
-                'newlines-between': 'always-and-inside-groups',
+                distinctGroup: true,
+                'newlines-between': 'always',
             },
         ],
         'import/extensions': 'off',
+        'import/no-duplicates': ['error'],
     },
     overrides: [
         {
@@ -194,6 +196,18 @@ module.exports = {
                     'error',
                     {
                         accessibility: 'no-public',
+                    },
+                ],
+                'import/consistent-type-specifier-style': [
+                    'error',
+                    'prefer-top-level',
+                ],
+                '@typescript-eslint/consistent-type-imports': [
+                    'error',
+                    {
+                        prefer: 'type-imports',
+                        disallowTypeAnnotations: true,
+                        fixStyle: 'separate-type-imports',
                     },
                 ],
             },
