@@ -1,3 +1,10 @@
+# [1.2.0-next.10](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.9...v1.2.0-next.10) (2023-06-04)
+
+
+### Features
+
+* add allow generators for func-names ([9674cb3](https://github.com/vi-latyshev/eslint-config/commit/9674cb3b93b6bb8c444d8b1a44cf2937c3f5d5b5))
+
 # [1.2.0-next.9](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.8...v1.2.0-next.9) (2023-06-04)
 
 
