@@ -1,3 +1,10 @@
+# [1.2.0-next.9](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.8...v1.2.0-next.9) (2023-06-04)
+
+
+### Features
+
+* add consistent imports ([7970aad](https://github.com/vi-latyshev/eslint-config/commit/7970aad1a12e594a1f84e18b9b9412663d2052e8))
+
 # [1.2.0-next.8](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0-next.7...v1.2.0-next.8) (2023-05-17)
 
 
