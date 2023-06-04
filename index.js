@@ -43,6 +43,7 @@ module.exports = {
         ],
         'linebreak-style': ['error', 'unix'],
         'func-style': ['error', 'expression'],
+        'func-names': ['error', 'never', { generators: 'as-needed' }],
         // @TODO - add more statements
         'no-restricted-syntax': [
             'error',
