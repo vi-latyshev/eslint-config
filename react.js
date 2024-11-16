@@ -3,13 +3,18 @@
  */
 module.exports = {
     extends: [
+        'airbnb/hooks',
         require.resolve('.'),
     ],
+    env: {
+        browser: true,
+    },
     overrides: [
         {
             files: ['**/*.ts?(x)'],
             extends: [
-                'plugin:@next/next/recommended',
+                'airbnb',
+                require.resolve('.'),
             ],
             // If adding a typescript-eslint version of
             // an existing ESLint (equivalents) rule,
@@ -40,10 +45,24 @@ module.exports = {
                 'react/function-component-definition': ['error', {
                     namedComponents: 'arrow-function',
                 }],
-                'react-hooks/exhaustive-deps': 'off',
+                'react/jsx-filename-extension': [
+                    'error',
+                    {
+                        extensions: ['.jsx', '.tsx'],
+                    },
+                ],
+                // 'react-hooks/exhaustive-deps': 'off',
 
                 // jsx-a11y
-                'jsx-a11y/anchor-is-valid': 'off',
+                // 'jsx-a11y/anchor-is-valid': 'off',
+            },
+        },
+        {
+            // Next.js App Router | Pages Routes
+            files: ['**/app/**', '**/pages/**'],
+            rules: {
+                'import/no-default-export': 'off',
+                'import/prefer-default-export': 'error',
             },
         },
     ],

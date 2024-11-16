@@ -6,6 +6,10 @@ module.exports = {
         {
             name: 'master',
         },
+        {
+            name: 'next',
+            prerelease: true,
+        },
     ],
     plugins: [
         '@semantic-release/commit-analyzer',

@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
 
 /**
@@ -12,10 +11,10 @@ module.exports = {
     env: {
         es6: true,
         node: true,
-        browser: true,
     },
     parserOptions: {
         sourceType: 'module',
+        ecmaVersion: 2020,
     },
     rules: {
         // http://eslint.org/docs/rules/
@@ -44,6 +43,7 @@ module.exports = {
         ],
         'linebreak-style': ['error', 'unix'],
         'func-style': ['error', 'expression'],
+        'func-names': ['error', 'never', { generators: 'as-needed' }],
         // @TODO - add more statements
         'no-restricted-syntax': [
             'error',
@@ -57,6 +57,12 @@ module.exports = {
             'as-needed',
         ],
         'newline-before-return': 'error',
+        'no-unused-vars': [
+            'warn',
+            {
+                argsIgnorePattern: '^_',
+            },
+        ],
 
         // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
         'import/no-default-export': 'error',
@@ -76,16 +82,22 @@ module.exports = {
                 ],
                 pathGroups: [
                     {
+                        pattern: '*@/**',
+                        group: 'internal',
+                    },
+                    {
                         pattern: '*(types)/**',
                         group: 'internal',
                         position: 'after',
                     },
                 ],
                 pathGroupsExcludedImportTypes: ['builtin', 'type'],
-                'newlines-between': 'always-and-inside-groups',
+                distinctGroup: true,
+                'newlines-between': 'always',
             },
         ],
-
+        'import/extensions': 'off',
+        'import/no-duplicates': ['error'],
     },
     overrides: [
         {
@@ -107,10 +119,12 @@ module.exports = {
             // an existing ESLint (equivalents) rule,
             // make sure to disable the ESLint rule here.
             rules: {
-                'no-shadow': 'off',
+                'import/extensions': 'off',
 
+                'no-shadow': 'off',
                 // https://typescript-eslint.io/rules/
                 '@typescript-eslint/no-shadow': 'error',
+
                 '@typescript-eslint/no-explicit-any': 'error',
 
                 semi: 'off',
@@ -156,7 +170,7 @@ module.exports = {
                 ],
                 '@typescript-eslint/type-annotation-spacing': 'error',
                 '@typescript-eslint/explicit-module-boundary-types': 'error',
-                '@typescript-eslint/lines-between-class-members': ['error', 'never'],
+                '@typescript-eslint/lines-between-class-members': ['error', 'always'],
                 '@typescript-eslint/member-ordering': [
                     'error',
                     {
@@ -177,6 +191,24 @@ module.exports = {
                             'protected-method',
                             'private-method',
                         ],
+                    },
+                ],
+                '@typescript-eslint/explicit-member-accessibility': [
+                    'error',
+                    {
+                        accessibility: 'no-public',
+                    },
+                ],
+                'import/consistent-type-specifier-style': [
+                    'error',
+                    'prefer-top-level',
+                ],
+                '@typescript-eslint/consistent-type-imports': [
+                    'error',
+                    {
+                        prefer: 'type-imports',
+                        disallowTypeAnnotations: true,
+                        fixStyle: 'separate-type-imports',
                     },
                 ],
             },
