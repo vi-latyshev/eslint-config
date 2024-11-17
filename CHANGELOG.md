@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/vi-latyshev/eslint-config/compare/v1.1.0...v1.2.0) (2024-11-17)
+
+
+### Features
+
+* bump all packages ([#13](https://github.com/vi-latyshev/eslint-config/issues/13)) ([c8a8858](https://github.com/vi-latyshev/eslint-config/commit/c8a8858f1e2e802e64c04947e2133cc63374b0d6))
+* support next.js for react ([#5](https://github.com/vi-latyshev/eslint-config/issues/5)) ([d5deabf](https://github.com/vi-latyshev/eslint-config/commit/d5deabf1ae8d7201158bcf9cd8444ae4d88dfc5e)), closes [#2](https://github.com/vi-latyshev/eslint-config/issues/2)
+* upgrade deps ([9946019](https://github.com/vi-latyshev/eslint-config/commit/994601921d1bd205cb56c23d03d10659e390dab2))
+
 # [1.2.0-next.1](https://github.com/vi-latyshev/eslint-config/compare/v1.1.0...v1.2.0-next.1) (2024-11-17)
 
 
