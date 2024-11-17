@@ -1,13 +1,75 @@
+// eslint-disable-next-line import/order
 const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
+
+/*
+ * @rushstack/eslint-patch is used to include plugins as dev
+ * dependencies instead of imposing them as peer dependencies
+ *
+ * https://www.npmjs.com/package/@rushstack/eslint-patch
+ *
+ * inspired by eslint-config-next
+ */
+const keptPaths = [];
+const sortedPaths = [];
+const cwd = process.cwd().replace(/\\/g, '/');
+const originalPaths = require.resolve.paths('eslint-plugin-import');
+
+// eslint throws a conflict error when plugins resolve to different
+// locations, since we want to lock our dependencies by default
+// but also need to allow using user dependencies this updates
+// our resolve paths to first check the cwd and iterate to
+// eslint-config-next's dependencies if needed
+
+for (let i = originalPaths.length - 1; i >= 0; i--) {
+    const currentPath = originalPaths[i];
+
+    if (currentPath.replace(/\\/g, '/').startsWith(cwd)) {
+        sortedPaths.push(currentPath);
+    } else {
+        keptPaths.unshift(currentPath);
+    }
+}
+
+// maintain order of node_modules outside of cwd
+sortedPaths.push(...keptPaths);
+
+const hookPropertyMap = new Map(
+    [
+        'eslint-plugin-import',
+        'eslint-config-airbnb-base',
+        // typescript
+        '@typescript-eslint/parser',
+        '@typescript-eslint/eslint-plugin',
+        'eslint-config-airbnb-typescript',
+        // react
+        'eslint-plugin-react',
+        'eslint-plugin-react-hooks',
+        'eslint-plugin-jsx-a11y',
+    ].map((request) => [request, require.resolve(request, { paths: sortedPaths })]),
+);
+
+const mod = require('module');
+
+/* eslint-disable no-underscore-dangle, func-names, no-param-reassign */
+const resolveFilename = mod._resolveFilename;
+mod._resolveFilename = function (request, parent, isMain, options) {
+    const hookResolved = hookPropertyMap.get(request);
+    if (hookResolved) {
+        request = hookResolved;
+    }
+
+    return resolveFilename.call(mod, request, parent, isMain, options);
+};
+/* eslint-enable */
+
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 /**
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
     root: true,
-    extends: [
-        'airbnb-base',
-    ],
+    extends: ['airbnb-base'],
     env: {
         es6: true,
         node: true,
@@ -41,9 +103,13 @@ module.exports = {
                 ignoreTemplateLiterals: true,
             },
         ],
-        'linebreak-style': ['error', 'unix'],
+        'linebreak-style': ['warn', 'unix'],
         'func-style': ['error', 'expression'],
-        'func-names': ['error', 'never', { generators: 'as-needed' }],
+        'func-names': [
+            'error',
+            'never',
+            { generators: 'as-needed' },
+        ],
         // @TODO - add more statements
         'no-restricted-syntax': [
             'error',
@@ -52,15 +118,28 @@ module.exports = {
             "BinaryExpression[operator='in']",
             'IfStatement > :not(BlockStatement).consequent',
         ],
-        radix: [
+        'no-plusplus': [
             'error',
-            'as-needed',
+            {
+                allowForLoopAfterthoughts: true,
+            },
         ],
+        radix: ['error', 'as-needed'],
         'newline-before-return': 'error',
         'no-unused-vars': [
             'warn',
             {
                 argsIgnorePattern: '^_',
+            },
+        ],
+        'array-bracket-newline': ['error', { multiline: true, minItems: 3 }],
+        'array-element-newline': ['error', { multiline: true, minItems: 3 }],
+        'object-curly-spacing': ['error', 'always'],
+        'object-curly-newline': [
+            'error',
+            {
+                consistent: true,
+                minProperties: 3,
             },
         ],
 
@@ -71,12 +150,10 @@ module.exports = {
             'error',
             {
                 groups: [
-                    [
-                        'builtin',
-                        'external',
-                    ],
+                    ['builtin', 'external'],
                     'internal',
                     'parent',
+                    'index',
                     'sibling',
                     'type',
                 ],
@@ -92,8 +169,9 @@ module.exports = {
                     },
                 ],
                 pathGroupsExcludedImportTypes: ['builtin', 'type'],
-                distinctGroup: true,
                 'newlines-between': 'always',
+                warnOnUnassignedImports: true,
+                distinctGroup: false,
             },
         ],
         'import/extensions': 'off',
@@ -112,9 +190,7 @@ module.exports = {
                 // typescript-eslint specific options
                 warnOnUnsupportedTypeScriptVersion: true,
             },
-            extends: [
-                'airbnb-typescript/base',
-            ],
+            extends: ['airbnb-typescript/base'],
             // If adding a typescript-eslint version of
             // an existing ESLint (equivalents) rule,
             // make sure to disable the ESLint rule here.
@@ -170,7 +246,14 @@ module.exports = {
                 ],
                 '@typescript-eslint/type-annotation-spacing': 'error',
                 '@typescript-eslint/explicit-module-boundary-types': 'error',
-                '@typescript-eslint/lines-between-class-members': ['error', 'always'],
+                '@typescript-eslint/lines-between-class-members': [
+                    'error',
+                    'always',
+                    {
+                        exceptAfterOverload: true,
+                        exceptAfterSingleLine: true,
+                    },
+                ],
                 '@typescript-eslint/member-ordering': [
                     'error',
                     {
@@ -199,10 +282,6 @@ module.exports = {
                         accessibility: 'no-public',
                     },
                 ],
-                'import/consistent-type-specifier-style': [
-                    'error',
-                    'prefer-top-level',
-                ],
                 '@typescript-eslint/consistent-type-imports': [
                     'error',
                     {
@@ -211,6 +290,9 @@ module.exports = {
                         fixStyle: 'separate-type-imports',
                     },
                 ],
+
+                // imports
+                'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
             },
         },
     ],
