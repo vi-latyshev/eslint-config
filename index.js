@@ -36,6 +36,7 @@ sortedPaths.push(...keptPaths);
 const hookPropertyMap = new Map(
     [
         'eslint-plugin-import',
+        'eslint-config-airbnb',
         'eslint-config-airbnb-base',
         // typescript
         '@typescript-eslint/parser',
