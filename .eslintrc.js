@@ -2,5 +2,5 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-    extends: './index.js',
+    extends: './src/index.js',
 };

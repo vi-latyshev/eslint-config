@@ -6,7 +6,11 @@ on:
       - next
 
 permissions:
-  contents: read # for checkout
+  id-token: write  # Required for OIDC
+  contents: write # for checkout
+  issues: write
+  pull-requests: write
+  deployments: write
 
 env:
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -26,11 +30,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: 'package.json'
+          node-version-file: '.nvmrc'
 
       - name: Install dependencies
         run: yarn
