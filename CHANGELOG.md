@@ -1,3 +1,15 @@
+# [1.4.0-next.1](https://github.com/vi-latyshev/eslint-config/compare/v1.3.0...v1.4.0-next.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* bump node ([abfd55b](https://github.com/vi-latyshev/eslint-config/commit/abfd55b7edf7cc156d2e86ad1ec8dd66e3ecbebc))
+
+
+### Features
+
+* bump deps to last minor ([edd8f91](https://github.com/vi-latyshev/eslint-config/commit/edd8f916fe03a1b7311d2338e147dfaee9684cc1))
+
 # [1.3.0](https://github.com/vi-latyshev/eslint-config/compare/v1.2.0...v1.3.0) (2025-06-05)
 
 
