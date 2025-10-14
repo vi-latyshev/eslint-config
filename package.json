@@ -2,7 +2,7 @@
   "name": "@v.latyshev/eslint-config",
   "version": "1.4.0-next.1",
   "description": "ESLint configuration by VI",
-  "main": "src/index.js",
+  "main": "index.js",
   "author": "vi-latyshev",
   "license": "MIT",
   "repository": {
@@ -10,7 +10,8 @@
     "url": "https://github.com/vi-latyshev/eslint-config.git"
   },
   "files": [
-    "src/*"
+    "index.js",
+    "react.js"
   ],
   "publishConfig": {
     "access": "public",
